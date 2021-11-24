@@ -1,15 +1,17 @@
 // test/Box.test.js
 // Load dependencies
+const { accounts, contract } = require("@openzeppelin/test-environment");
 const { expect } = require("chai");
 
 // Import utilities from Test Helpers
 const { BN, expectEvent, expectRevert } = require("@openzeppelin/test-helpers");
 
 // Load compiled artifacts
-const Box = artifacts.require("Box");
+const Box = contract.fromArtifact("Box");
 
 // Start test block
-contract("Box", ([owner, other]) => {
+describe("Box", () => {
+  const [owner, other] = accounts;
   // use large integers
   const value = new BN("42");
 
