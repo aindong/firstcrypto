@@ -11,6 +11,7 @@
   "license": "ISC",
   "devDependencies": {
     "@openzeppelin/contracts": "^4.3.3",
+    "ganache-cli": "^6.12.2",
     "truffle": "^5.4.21"
   }
 }
